@@ -1,1 +1,136 @@
+/* Element Selector */
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    color: #333333;
+}
+
+
+/* Header */
+
+header {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header p {
+    color: rgb(210, 210, 210);
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+/* ID Selector */
+
+#about {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+/* Class Selector */
+
+.intro {
+    color: rgb(40, 90, 150);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Element Selector */
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+/* Ordered List - Movies */
+
+.movies {
+    color: #444444;
+    padding-left: 30px;
+}
+
+.movies li {
+    margin: 10px 0;
+}
+
+
+/* Unordered List - Cities */
+
+.cities {
+    color: rgb(50, 100, 70);
+    padding-left: 30px;
+}
+
+.cities li {
+    margin: 10px 0;
+}
+
+
+/* Pseudo-class Selector */
+
+.movies li:hover {
+    color: #e63946;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cities li:hover {
+    color: rgb(30, 100, 200);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ID Selector */
+
+#team {
+    border-top: 4px solid #333333;
+}
+
+
+/* Class Selector */
+
+.member {
+    background-color: #eeeeee;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid rgb(70, 120, 180);
+}
+
+.member h3 {
+    color: #333333;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
