@@ -1,98 +1,93 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #0077be;
 }
 
-
 .nav-link {
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #00ffff !important;
+    color: #00e6ff !important;
+    transform: scale(1.1);
 }
 
-
 .hero {
-    background: linear-gradient(135deg, #101c3a, #182c5c);
+    background: linear-gradient(180deg, #001f3f 0%, #003366 50%, #0077be 100%);
     color: white;
-
-    min-height: 500px;
-
+    min-height: calc(100vh - 56px);
     display: flex;
     align-items: center;
-
 }
 
 .hero h1 {
     font-size: 50px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-
-.tech-icon {
-    font-size: 150px;
-
-    animation: float 3s infinite;
-
+.ocean-area {
+    position: relative;
+    height: 400px;
+    width: 100%;
 }
 
+.fish {
+    position: absolute;
+    font-size: 80px;
+    left: 10%;
+    top: 20%;
+    animation: fishSwim 5s infinite ease-in-out;
+    display: inline-block;
+    transform: scaleX(-1);
+}
 
-@keyframes float {
+.diver {
+    position: absolute;
+    font-size: 60px;
+    right: 20%;
+    top: 50%;
+    animation: diverFloat 4s infinite ease-in-out;
+}
 
+@keyframes fishSwim {
     0% {
-        transform: translateY(0);
+        transform: scaleX(-1) translate(0, 0);
     }
 
     50% {
-        transform: translateY(-25px);
+        transform: scaleX(-1) translate(60px, 20px);
     }
 
     100% {
-        transform: translateY(0);
+        transform: scaleX(-1) translate(0, 0);
+    }
+}
+
+@keyframes diverFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
     }
 
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
-
-
-.services {
-    background-color: #f4f4f4;
-}
-
-
-.service-card {
-    height: 100%;
-
-    transition: 0.3s;
-
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-}
-
-
-.icon {
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-
-.contact {
-    min-height: 250px;
-}
-
 
 @media screen and (max-width: 768px) {
-
     .hero {
-        padding: 80px 0;
-        text-align: center;
+        min-height: 100vh;
+        padding: 60px 0;
     }
 
     .hero h1 {
@@ -103,9 +98,16 @@ body {
         font-size: 18px;
     }
 
-    .tech-icon {
-        font-size: 100px;
-        margin-top: 40px;
+    .ocean-area {
+        height: 300px;
+        margin-top: 20px;
     }
 
+    .fish {
+        font-size: 60px;
+    }
+
+    .diver {
+        font-size: 50px;
+    }
 }
