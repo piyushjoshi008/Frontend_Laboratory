@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Navratri Eligibility Checker</h1>
+
+    <script>
+        let appliedDate = new Date(prompt("Please enter the date you applied for Navratri (YYYY-MM-DD):"));
+
+        let startDate = new Date("2026-09-10");
+        let endDate = new Date("2026-09-20");
+
+        if (appliedDate >= startDate && appliedDate <= endDate) {
+            document.write("Eligible for Navratri");
+        } else {
+            document.write("Not eligible for Navratri");
+        }
+    </script>
+</body>
+
+</html>
