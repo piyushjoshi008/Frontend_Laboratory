@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Report</title>
+</head>
+<body>
+
+    <h2>Student Marks Report</h2>
+
+    <script>
+        const students = [
+            { name: "Rohan", marks: 85 },
+            { name: "Ananya", marks: 32 },
+            { name: "Vivek", marks: 67 },
+            { name: "Neha", marks: 90 },
+            { name: "Arjun", marks: 28 }
+        ];
+
+        (function (students) {
+
+            const updated = students.map(s => ({
+                name: s.name,
+                marks: Math.min(s.marks + 5, 100)
+            }));
+
+            const passed = updated.filter(s => s.marks >= 40);
+
+            const total = passed.reduce((sum, s) => sum + s.marks, 0);
+
+            const average = passed.length ? total / passed.length : 0;
+
+            document.write("<h3>Passing Students</h3>");
+
+            passed.forEach(s =>
+                document.write(s.name + " - " + s.marks + "<br>")
+            );
+
+            document.write("<h3>Final Report</h3>");
+            document.write("Average Marks: " + average.toFixed(2));
+
+        })(students);
+    </script>
+
+</body>
+</html>
