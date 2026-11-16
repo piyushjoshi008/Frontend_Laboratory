@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 2</title>
+</head>
+<body>
+
+    <script>
+        let x = prompt("Enter a Number");
+
+        if (x == "" || x == null || isNaN(x)) {
+            console.log("Please Enter a Valid Number");
+        }
+        else if (Number.isInteger(Number(x))) {
+            console.log("Number itself: " + x);
+        }
+        else {
+            console.log("Integer Value: " + parseInt(x));
+        }
+    </script>
+
+</body>
+</html>

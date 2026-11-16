@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 12</title>
+</head>
+<body>
+
+    <script>
+        let student = {
+            Rahul: 85,
+            Pooja: 92,
+            Amit: 76,
+            Renu: 89,
+            Kiran: 68
+        };
+
+        let total = 0;
+        let count = 0;
+        let highest = 0;
+        let topper = "";
+
+        for (let name in student) {
+            let marks = student[name];
+
+            total = total + marks;
+            count++;
+
+            if (marks > highest) {
+                highest = marks;
+                topper = name;
+            }
+        }
+
+        let average = total / count;
+
+        console.log("Total Marks: " + total);
+        console.log("Average Marks: " + average);
+        console.log("Highest Marks: " + highest);
+        console.log("Topper: " + topper);
+    </script>
+
+</body>
+</html>

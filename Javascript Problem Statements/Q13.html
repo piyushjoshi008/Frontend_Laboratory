@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 13</title>
+</head>
+<body>
+
+    <script>
+        let num = [12, -5, 0, 23, -18, 0, 17, -8, 15];
+
+        let positiveSum = 0;
+        let negativeSum = 0;
+        let zeroCount = 0;
+
+        for (let i = 0; i < num.length; i++) {
+
+            if (num[i] > 0) {
+                positiveSum = positiveSum + num[i];
+            }
+            else if (num[i] < 0) {
+                negativeSum = negativeSum + num[i];
+            }
+            else {
+                zeroCount++;
+            }
+        }
+
+        console.log("Sum of Positive Numbers: " + positiveSum);
+        console.log("Sum of Negative Numbers: " + negativeSum);
+        console.log("Count of Zeros: " + zeroCount);
+    </script>
+
+</body>
+</html>
