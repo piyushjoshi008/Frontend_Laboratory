@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        li {
+            margin: 10px;
+            list-style: none;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        button {
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Advanced To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter Task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+
+        function addTask() {
+
+            let input = document.getElementById("taskInput");
+            let task = input.value;
+
+            if (task === "") {
+                alert("Enter a task");
+                return;
+            }
+
+            let li = document.createElement("li");
+
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            let span = document.createElement("span");
+            span.innerText = task;
+
+            checkbox.onchange = function() {
+                span.classList.toggle("completed");
+            };
+
+            let upBtn = document.createElement("button");
+            upBtn.innerHTML = "&uarr;";
+
+            upBtn.onclick = function() {
+                let prev = li.previousElementSibling;
+
+                if (prev) {
+                    li.parentNode.insertBefore(li, prev);
+                }
+            };
+
+            let downBtn = document.createElement("button");
+            downBtn.innerHTML = "&darr;";
+
+            downBtn.onclick = function() {
+                let next = li.nextElementSibling;
+
+                if (next) {
+                    li.parentNode.insertBefore(next, li);
+                }
+            };
+
+            li.append(checkbox, span, upBtn, downBtn);
+
+            document.getElementById("taskList").appendChild(li);
+
+            input.value = "";
+        }
+
+    </script>
+
+</body>
+</html>
