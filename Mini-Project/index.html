@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piyush Joshi | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#home" class="logo">Piyush Joshi</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>Hi, I'm Piyush Joshi.<br>I build clean, simple web pages.</h1>
+      <p>B.Tech CSE student practising Java and data structures, learning frontend development, and aiming for
+        full-stack work and open source.</p>
+      <div class="buttons">
+        <a href="#projects" class="btn">View projects</a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
+
+      <div class="console">
+        <div class="console-bar">Developer console. Type <b>help</b> to begin.</div>
+        <div id="console-output" class="console-output"></div>
+        <form id="console-form" class="console-form">
+          <label>&gt;</label>
+          <input id="console-input" type="text" placeholder="try: help">
+        </form>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>I'm a B.Tech Computer Science student. I enjoy turning ideas into small, working projects and understanding how
+        they work underneath. I practise Java and DSA regularly, and I use HTML, CSS and JavaScript to build the
+        interfaces people see.</p>
+      <p>My goal is to grow into a full-stack developer and contribute to open source projects.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, responsive layouts</p>
+        </div>
+        <div class="card">
+          <h3>Programming</h3>
+          <p>Java, object-oriented programming</p>
+        </div>
+        <div class="card">
+          <h3>Problem solving</h3>
+          <p>Data structures and algorithms practice</p>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <p>Git, GitHub, VS Code</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+      </div>
+      <div class="project-grid">
+        <article class="card project" data-category="frontend">
+          <h3>Personal Portfolio</h3>
+          <p>This website, built with plain HTML, CSS and JavaScript.</p>
+          <span class="tag">Frontend</span>
+        </article>
+        <article class="card project" data-category="frontend">
+          <h3>To-Do List App</h3>
+          <p>Add, complete and delete tasks using DOM manipulation.</p>
+          <span class="tag">Frontend</span>
+        </article>
+        <article class="card project" data-category="programming">
+          <h3>Library Management (Java)</h3>
+          <p>Console application using classes, objects and collections.</p>
+          <span class="tag">Programming</span>
+        </article>
+        <article class="card project" data-category="programming">
+          <h3>DSA Practice Repository</h3>
+          <p>Solutions to array, string and linked list problems in Java.</p>
+          <span class="tag">Programming</span>
+        </article>
+      </div>
+      <p class="note">More work on <a href="https://github.com/piyushjoshi008" target="_blank">GitHub</a>.</p>
+    </section>
+
+    <section id="journey">
+      <h2>My journey</h2>
+      <ol class="timeline">
+        <li><b>Started B.Tech CSE.</b> Learned programming fundamentals and began coding in Java.</li>
+        <li><b>Practised DSA.</b> Solved problems regularly to build logic and confidence.</li>
+        <li><b>Learned frontend basics.</b> Built pages with HTML, CSS and JavaScript.</li>
+        <li><b>Next: full-stack and open source.</b> Learning backend concepts and making first contributions.</li>
+      </ol>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Want to talk about a project or an opportunity? Send me a message.</p>
+      <p><a href="mailto:official.piyushjoshi008@gmail.com">official.piyushjoshi008@gmail.com</a></p>
+      <p><a href="https://github.com/piyushjoshi008" target="_blank">GitHub</a> · <a
+          href="https://www.linkedin.com/in/piyush-joshi-0713bb391/" target="_blank">LinkedIn</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Piyush Joshi</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
